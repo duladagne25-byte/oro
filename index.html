@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yeronis Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Yeronis Dashboard</h1>
+    <p>Admin: Dula | Addis Ababa, Ethiopia</p>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#users">Users</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#materials">Materials</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Overview -->
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>Total Users: <span id="userCount">0</span></p>
+        <p>Total Courses: <span id="courseCount">0</span></p>
+        <p>Uploaded Materials: <span id="materialCount">0</span></p>
+      </section>
+
+      <!-- Users -->
+      <section id="users">
+        <h2>Manage Users</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Study Level</th>
+            </tr>
+          </thead>
+          <tbody id="userTable">
+            <!-- Users will be added dynamically -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Courses -->
+      <section id="courses">
+        <h2>Manage Courses</h2>
+        <form id="courseForm">
+          <input type="text" placeholder="Course Name" required>
+          <button type="submit">Add Course</button>
+        </form>
+        <ul id="courseList"></ul>
+      </section>
+
+      <!-- Materials -->
+      <section id="materials">
+        <h2>Upload Materials</h2>
+        <form id="materialForm">
+          <input type="file" id="materialUpload" required>
+          <button type="submit">Upload</button>
+        </form>
+        <ul id="materialList"></ul>
+      </section>
+
+      <!-- Settings -->
+      <section id="settings">
+        <h2>Settings</h2>
+        <p>Here you can configure dashboard preferences.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
